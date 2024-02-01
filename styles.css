@@ -1,0 +1,355 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+.header img {
+  width: 250px;
+  height: 250px;
+}
+
+.header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px 0 0;
+  position: fixed;
+  width: 100%;
+  background-color: rgb(253, 220, 226);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+
+.navbar-link:hover {
+  color: rgb(255, 141, 215);
+  transition: all 1s ease;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar i {
+  font-size: 40px;
+  display: none;
+}
+
+#toggle-menu {
+  display: none;
+}
+.navbar-link {
+  text-decoration: none;
+  color: rgb(148, 132, 132);
+  font-weight: 300;
+  font-size: 30px;
+}
+
+@media (max-width: 576px) {
+  .navbar ul {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(200%);
+    transition: all 0.4s ease;
+  }
+  .navbar i {
+    display: block;
+  }
+  #toggle-menu:checked ~ .navbar-list {
+    transform: translateX(0);
+  }
+}
+
+/* Section I - Bienvenida */
+main {
+  padding-top: 100px;
+}
+.bienvenida {
+  background: url(./img/bienvenida1.avif) no-repeat center/cover;
+  display: flex;
+  width: 100vw;
+  height: 500px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.bienvenida-title {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  gap: 10px;
+  padding: 20px 0 0 10px;
+  text-align: center;
+  padding-left: 50px;
+}
+.bienvenida-title h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.bienvenida-title h3 {
+  font-size: 15px;
+}
+
+.bienvenida-title p {
+  font-size: 14px;
+}
+
+.btn-bienvenida {
+  width: 75px;
+  align-self: center;
+  margin-top: 6px;
+  background: pink;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+/* Section II  */
+
+.servicios {
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-servicios {
+  margin-top: 80px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: white;
+}
+.tipos-servicios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.caja {
+  width: 200px;
+  height: 200px;
+  transition: all 1s ease;
+  border-radius: 10px;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+}
+
+.caja1 {
+  background: url(./img/Manicuria.jpg) no-repeat center/cover;
+}
+.caja2 {
+  background: url(./img/Pedicuria.jpg) no-repeat center/cover;
+}
+.caja3 {
+  background: url(./img/Lifting.jpg) no-repeat center/cover;
+}
+.caja4 {
+  background: url(./img/Perfilado.jpg) no-repeat center/cover;
+}
+.caja5 {
+  background: url(./img/Alisado.jpg) no-repeat center/cover;
+}
+.caja6 {
+  background: url(./img/Extensiones.jpg) no-repeat center/cover;
+}
+.caja7 {
+  background: url(./img/Depilacion.jpg) no-repeat center/cover;
+}
+
+.caja:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 25px 5px rgb(122, 82, 109);
+}
+
+/* Section III - slide precios */
+
+.precios {
+  width: 100%;
+  height: 600px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contenedor-cajas {
+  width: 80%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.caja-izq {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  animation: moverCajaizq 1.5s ease;
+}
+
+.caja-der {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  animation: moverCajader 1.5s ease;
+}
+
+.caja-p {
+  width: 100%;
+  height: 33.3%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: violet;
+  border-radius: 5px;
+}
+
+.precios h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.caja-depilacion {
+  height: 100px;
+  width: 80%;
+  background: violet;
+  margin-top: 10px;
+  border-radius: 5px;
+  animation: moverCajabuttom 1.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes moverCajaizq {
+  0% {
+    transform: translateX(-300px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes moverCajader {
+  0% {
+    transform: translateX(300px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes moverCajabuttom {
+  0% {
+    transform: translateY(500px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Section IV - Ubicacion */
+.ubicacion {
+  width: 100vw;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+.ubicacioncuadro {
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 50px;
+  gap: 10px;
+}
+
+.ubi {
+  color: white;
+  font-size: 40px;
+  font-family: "Caveat";
+  padding-bottom: 10px;
+}
+
+.ubi-h3,
+.ubi-p {
+  color: white;
+  font-size: 20px;
+  font-family: "Caveat";
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  font-size: 15px;
+  margin: 5px;
+  background: pink;
+}
+textarea {
+  background: pink;
+}
+.boton {
+  background: pink;
+  width: 80px;
+  border-radius: 5px;
+  align-self: center;
+}
+
+footer {
+  margin-top: 50px;
+  width: 100vw;
+  height: 100px;
+  background: rgb(0, 0, 0);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+i {
+  font-size: 30px;
+}
+a:visited {
+  color: white;
+}
+a {
+  color: white;
+}
+
+.a-nav:hover {
+  color: rgb(244, 185, 185);
+  transition: all 1s ease;
+}
